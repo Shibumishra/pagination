@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.wallpaper-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .product-card {
+    width: 100%;
+    height: 450px;
+    margin-left: 15%;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px #ccc;
+    border-radius: 5px;
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  .card_cont{
+    margin: 0 0 0 20px;
+    width: 21%;
   }
-}
+  .img-ban {
+    width: 100%;
+    background-color: #e6e6e6;
+    border-radius: 50%;
+  }
+  .product-name {
+    margin: 0 10px;
+    font-size: 16px;
+    color: blue;
+    font-weight: 600;
+  }
+  .product-title {
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #0e0f0f;
+    margin: 10px;
+  }
+  .loading {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  
+.paginationBttns {
+    width: 80%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .paginationBttns a {
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid #2b2eff;
+    color: #2b2eff;
+    cursor: pointer;
+  }
+  
+  .paginationBttns a:hover {
+    color: white;
+    background-color: #2b2eff;
+  }
+  
+  .paginationActive a {
+    color: white;
+    background-color: #2b2eff;
+  }
+  
+  .paginationDisabled a {
+    color: grey;
+    background-color: grey;
+  }
